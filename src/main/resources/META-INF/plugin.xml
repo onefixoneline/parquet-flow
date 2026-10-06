@@ -1,0 +1,15 @@
+<idea-plugin>
+    <!-- id / name / vendor / description / change-notes / idea-version are injected at build time
+         by intellijPlatform.pluginConfiguration in build.gradle.kts. This file only declares
+         dependencies and extension points. -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType
+            name="Parquet"
+            implementationClass="com.onefixoneline.parquetflow.ParquetFileType"
+            fieldName="INSTANCE"
+            language=""/>
+        <fileEditorProvider implementation="com.onefixoneline.parquetflow.ParquetFileEditorProvider"/>
+    </extensions>
+</idea-plugin>
