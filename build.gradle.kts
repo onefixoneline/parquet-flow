@@ -47,21 +47,24 @@ intellijPlatform {
             email = "morriseverley@gmail.com"
         }
         description = """
-            Lightweight, high-performance in-IDE viewer for Apache Parquet and Arrow binary files.
+            Fast in-IDE viewer for Apache Parquet files. Open any .parquet or .pq file to inspect its schema and sample rows without leaving your IDE.
             <ul>
-                <li><b>Instant Open:</b> Reads schema and sample rows in milliseconds.</li>
-                <li><b>Zero Freeze:</b> Virtualized table rendering prevents IDE memory spikes.</li>
-                <li><b>Local-Only:</b> 100% in-process DuckDB engine, zero telemetry.</li>
+                <li><b>Schema overview:</b> column names, inferred types, and nullability.</li>
+                <li><b>Data preview:</b> virtualized table with an adjustable row limit.</li>
+                <li><b>Nested types:</b> LIST, MAP, STRUCT, TIMESTAMP_NS, BLOB, DECIMAL.</li>
+                <li><b>Local only:</b> an embedded in-process DuckDB engine. No server, no network requests, no data leaves your machine.</li>
             </ul>
         """.trimIndent()
 
         changeNotes = """
             <ul>
               <li>Initial release of Parquet Flow.</li>
-              <li>Instant-open schema table and virtualized data grid for .parquet and .pq files.</li>
-              <li>100% in-process DuckDB engine: zero server, zero telemetry, zero external data leakage.</li>
-              <li>Supports primitive and nested types (STRUCT, LIST, MAP, TIMESTAMP_NS, BLOB, DECIMAL).</li>
-              <li>Adjustable row-limit sampling keeps memory flat on very large files.</li>
+              <li>Open any .parquet or .pq file to see its schema and a data preview without leaving the IDE.</li>
+              <li>Schema overview lists column names, inferred types, and nullability.</li>
+              <li>Data preview uses a virtualized table; the row limit is adjustable in the toolbar.</li>
+              <li>Renders nested and high-precision types: LIST, MAP, STRUCT, TIMESTAMP_NS, BLOB, DECIMAL.</li>
+              <li>SQL NULL is displayed as &lt;null&gt; so it is never confused with an empty string.</li>
+              <li>Reads files in-process with an embedded DuckDB engine. No server, no network requests, no data leaves your machine.</li>
             </ul>
         """.trimIndent()
 
