@@ -24,3 +24,9 @@ gradle-app.setting
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
+# Local scratch files: manual test datasets and Marketplace screenshots
+large_test_25k.parquet
+screenshot.png
+test_sample_arrow.arrow
+test_sample_feather.feather
